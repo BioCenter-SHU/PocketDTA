@@ -1,10 +1,9 @@
 # About PocketDTA: A Pocket-Based Multimodal Deep Learning Model for Drug-Target Affinity Prediction
 
-The approach used in this work is the modeling of protein sequences and compound 1D representations (SMILES) with convolutional neural networks (CNNs) to predict the binding affinity value of drug-target pairs.
-
 Our approach used an effective form of protein input, which combines protein pocket structures with pretrained sequence embedding. In addition, a pocket-based multimodal deep learning model for drug-target affinity prediction called PocketDTA is proposed.
 
 ![Figure](https://github.com/BioCenter-SHU/PocketDTA/blob/main/figures/model.png)
+
 # Installation
 
 ## Data
@@ -23,8 +22,10 @@ The main dependencies are listed below:
 *  torch-geometric=2.2.0
 *  wandb=0.14.0
 
-#Usage
+# Usage
+
 ## Dataset construction
+
 Scripts for all four dataset construction are provided in [DatasetBuilding](https://github.com/BioCenter-SHU/PocketDTA/tree/main/script/notebook/DatasetBuilding) in the `script/notebook/DatasetBuilding/` file. Davis dataset for example, three main notebook file need for generating DTA, protein, drug pkl file.
 
 * `DavisDataset.ipynb`
@@ -34,6 +35,7 @@ Scripts for all four dataset construction are provided in [DatasetBuilding](http
 The file `torchdrug/datasets/davis.py` in torchdrug then provide the whole picture for Davis and Filtered Davis dataset.
 
 ## Prediction
+
 The single sun and wandb sweep file can be found in `script/pythonfile/`, after enter your conda env just use `python SingleRun_davis.py` could run the single run on Davis dataset. The sweep need wandb package for automatic hyperparamers searching.
 
 
